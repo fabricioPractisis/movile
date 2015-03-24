@@ -1,0 +1,85 @@
+<div id="title" style="font-size: 25px; margin-top: 10px; margin-bottom: 10px;"></div>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Configuraciones Tipo de Habitaciones
+		<button id="modal-show" onclick="$('#modal').slideDown(); $('.showhide').hide(); $('#modal-hide').show(); return false;" type="button" class="showhide btn btn-default pull-right" style="margin-top: -7px;">Mostrar</button>
+		<button id="modal-hide" onclick="$('#modal').slideUp(); $('.form-control').val(''); $('#entryID').val(''); $('.showhide,#editEntry').hide(); $('#modal-show,#newEntry').show(); return false;" type="button" class="showhide btn btn-default pull-right" style="margin-top: -7px; display: none;">Ocultar</button>
+	</div>
+	<div id="modal" class="panel-body" style="display: none;">
+		<form class="form-inline" method="post" role="form">
+			<table class="table">
+				<tr>
+					<td>
+						<div class="input-group">
+							<span class="input-group-addon">Nombre</span>
+							<input name="descripcion" type="text" class="form-control">
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<span class="input-group-addon">Precio</span>
+							<input name="precio" onkeydown="intOrFloat(event,this.value);" type="text" class="form-control">
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<span class="input-group-addon">Min Pax</span>
+							<input name="capacidad_min" onkeydown="intOrFloat(event,this.value);" type="text" class="form-control">
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<span class="input-group-addon">Max Pax</span>
+							<input name="capacidad_max" onkeydown="intOrFloat(event,this.value);" type="text" class="form-control">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="border: 0px;">
+						<div class="input-group" style="width: 100%;">
+							<span class="input-group-addon">Descripcíon</span>
+							<textarea name="informacion" class="form-control" style="height: 100px;"></textarea>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="text-align: center;">
+						<input type="hidden" id="entryID" name="id" value=""/>
+						<button id="newEntry" type="button" onclick="DBAction('new','tipo_habitacion',''); return false;" class="btn btn-primary dropdown-toggle" aria-expanded="false" value="roomtypes">Agregar Tipo Habitacíon</button>
+						<button id="editEntry" type="button" onclick="DBAction('update','tipo_habitacion',''); return false;" class="btn btn-primary dropdown-toggle" aria-expanded="false" value="roomtypes" style="display: none;">Editar Tipo Habitacíon</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Listado Tipo de Habitaciones
+	</div>
+	<div class="panel-body">
+		<table class="table">
+			<tr id="roomtypeListing" style="font-weight: 600;">
+				<td>
+					Nombre
+				</td>
+				<td>
+					Precio
+				</td>
+				<td>
+					Min Pax
+				</td>
+				<td>
+					Max Pax
+				</td>
+				<td>
+					Descripcíon
+				</td>
+				<td style="text-align: center;">
+					Opciones
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

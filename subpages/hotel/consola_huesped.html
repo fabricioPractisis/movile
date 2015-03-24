@@ -1,0 +1,101 @@
+<div id="title" style="font-size: 25px; margin-top: 10px; margin-bottom: 10px;">Detalle Habitación</div>
+<div class="panel panel-default">
+	<div class="panel-heading" style="padding: 0px; margin: 0px;">
+		<table class="table" style="padding: 0px; margin: 0px;">
+			<tr>
+				<td style="border: none; width: 75%;">
+					<h3 class="panel-title" style="margin-top: 7px;">Reserva #<span id="reservaID"></span></h3>
+				</td>
+				<td style="border: none; width: 25%;">
+					<button type="button" onclick="$('#side-slider').animate({left : '100%'});" class="btn btn-primary pull-right"><span class="fa fa-reply"></span> Regresar</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="sideslider-content" class="panel-body">
+		<form class="form-inline" method="post" role="form">
+			<table class="table">
+				<tr>
+					<td colspan="3" style="border: none;">
+						<h4 style="margin: 0px;">Cliente</h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="input-group">
+							<span class="input-group-addon consoleTitleWidth">Referencia</span>
+							<input id="ref" name="referencia" type="text" class="form-control"/>
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<span class="input-group-addon consoleTitleWidth">Email</span>
+							<input id="email" name="email" type="text" class="form-control"/>
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<span class="input-group-addon consoleTitleWidth">Telefono</span>
+							<input id="telefono" name="telefono" type="text" class="form-control"/>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="border: none;">
+						<div class="input-group">
+							<span class="input-group-addon consoleTitleWidth">Documento</span>
+							<input id="documento" name="documento" type="text" class="form-control"/>
+						</div>
+					</td>
+					<td style="border: none;">
+						<div class="input-group">
+							<span class="input-group-addon consoleTitleWidth">Fecha In</span>
+							<input id="dateIn" name="fecha_in" type="text" class="form-control isNotPassedDate"/>
+						</div>
+					</td>
+					<td style="border: none;">
+						<div class="input-group">
+							<span class="input-group-addon consoleTitleWidth">Fecha Out</span>
+							<input id="dateOut" name="fecha_out" type="text" class="form-control isNotPassedDate"/>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="border: none;">
+						<textarea id="observaciones" name="observaciones" class="form-control" placeholder="Observaciones"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="border: none;">
+						<input type="hidden" id="entryID" name="id" value=""/>
+						<button type="button" onclick="DBAction('update','reserva',''); return false;" class="btn btn-primary"><span class="fa fa-check"></span> Guardar</button> 
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<h4>Opciones Adicionales</h4>
+						<button type="button" class="btn btn-warning"><span class="fa fa-calendar"></span> No Show</button> 
+						<button type="button" class="btn btn-danger"><span class="fa fa-close"></span> Cancelar Reserva</button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<h4>Detalle</h4>
+					
+						<table class="table table-striped">
+							<tr id="stayDetail" style="font-weight: 600;">
+								<td>Producto</td>
+								<td style="text-align: center;">Cantidad</td>
+								<td style="text-align: center;">Precio</td>
+							</tr>
+								<tr id="stayDetail" style="font-weight: 600;">
+								<td colspan="2" style="text-align: left;">TOTAL</td>
+								<td id="precioTotal" style="text-align: right;">Precio</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>

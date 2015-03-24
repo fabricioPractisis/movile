@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Fullrooms</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+    <body id="app" data-custom-background data-off-canvas-nav>
+        <div>
+            <div>
+				<section id="header" class="top-header">
+					<header class="clearfix">
+						<a href="#" class="toggle-min">
+							<i class="fa fa-bars"></i>
+						</a>
+						<div class="logo">
+							<a href="#">
+								<span>
+									Fullrooms
+								</span>
+							</a>
+						</div>
+
+						<div class="menu-button">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</div>
+					</header>
+				</section>
+                <aside id="nav-container">
+					<div id="nav-wrapper">
+						<div class="slimScrollDiv" style="position: relative; width: auto; height: 100%;">
+							<ul id="nav">
+								<li>
+									<a href="#" data-link="subpages/dashboard/dashboard.html">
+										<i style="color: #fff;" class="fa fa-dashboard menuItem">
+											<span class="icon-bg bg-danger"></span>
+										</i>
+										Dashboard
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i style="color: #fff;" class="fa fa-usd menuItem">
+											<span class="icon-bg bg-orange"></span>
+										</i>
+										<span>Hotel</span>
+									</a>
+									<ul style="display: none;">
+										<li>
+											<a href="#" data-link="subpages/hotel/walkin.html">
+												<i class="fa fa-caret-right"></i>
+												<span>WalkIn</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-title="Consola" data-reference="console" data-link="subpages/hotel/consola.html">
+												<i class="fa fa-caret-right"></i>
+												<span>Consola</span>
+											</a>
+										</li>			
+									</ul>
+									
+								</li>
+								<li>
+									<a href="#">
+										<i style="color: #fff;" class="fa fa-usd menuItem">
+											<span class="icon-bg bg-warning"></span>
+										</i>
+										<span>Reservas</span>
+									</a>
+									<ul style="display: none;">
+										<li>
+											<a href="#">
+												<i class="fa fa-caret-right"></i>
+												<span>Nueva Reserva</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-caret-right"></i>
+												<span>Listado</span>
+											</a>
+										</li>			
+									</ul>
+									
+								</li>
+								<li>
+									<a href="#">
+										<i style="color: #fff;" class="fa fa-usd menuItem">
+											<span class="icon-bg bg-success "></span>
+										</i>
+										<span>POS</span>
+									</a>
+									<ul style="display: none;">
+										<li>
+											<a href="#">
+												<i class="fa fa-caret-right"></i>
+												<span>POS</span>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i class="fa fa-caret-right"></i>
+												<span>Historial</span>
+											</a>
+										</li>			
+									</ul>
+									
+								</li>
+								<li>
+									<a href="#">
+										<i style="color: #fff;" class="fa fa-dashboard menuItem">
+											<span class="icon-bg bg-blue"></span>
+										</i>
+										Productos
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i style="color: #fff;" class="fa fa-usd menuItem">
+											<span class="icon-bg bg-orange"></span>
+										</i>
+										<span>Configuraciones</span>
+									</a>
+									<ul style="display: none;">
+										<li>
+											<a href="#" data-title="Tipos de Habitaciones" data-reference="roomtypes" data-link="subpages/configuraciones/roomtypes.html">
+												<i class="fa fa-caret-right"></i>
+												<span>Tipo Habitacion</span>
+											</a>
+										</li>
+										<li>
+											<a href="#" data-title="Habitaciones" data-reference="rooms" data-link="subpages/configuraciones/rooms.html">
+												<i class="fa fa-caret-right"></i>
+												<span>Habitaciones</span>
+											</a>
+										</li>			
+									</ul>
+									
+								</li>
+								<li>
+									<a href="#">
+										<i style="color: #fff;" class="fa fa-dashboard menuItem">
+											<span class="icon-bg bg-danger"></span>
+										</i>
+										Cloud
+									</a>
+								</li>
+							</ul>
+						
+							<div class="slimScrollBar" style="background: none repeat scroll 0% 0% rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 607px;"></div>
+							<div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: none repeat scroll 0% 0% rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+						</div>
+					</div>
+				</aside>
+            </div>
+            <div class="view-container">
+                <section id="content">
+					sdfdf
+				</section>
+				<section id="side-slider" data-slideisshown="false">
+					sdfdf
+				</section>
+            </div>
+        </div>
+        <!--<script src="scripts/vendor.js"></script>
+        <script src="scripts/ui.js"></script>
+        <!--<script src="scripts/app.js"></script>-->
+		
+
+
+		<div class="modal fade" id="modal-dialog-update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel" style="color: #37bc9b;">Actualizado!</h4>
+					</div>
+					<div class="modal-body" style="color: #333333;">
+						Los datos han sido actualizados con éxito!
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Perfecto! Cierra esta ventana.</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </body>
+</html>
+
+<script type="text/javascript">
+var today = new Date();
+var dateFormatted = (new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()))).toISOString().slice(0, 10).replace(/-/g, '-');
+
+var dataInitReferences = {
+	'roomtypes' : 'SELECT * FROM tipo_habitacion',
+	'rooms' 	: 'SELECT * FROM habitaciones',
+	'console' 	: 'SELECT th.id, th.descripcion AS desc, h.id, h.nombre_habitacion, h.id_tipo_habitacion,q.ocupado FROM tipo_habitacion th INNER JOIN habitaciones h ON th.id=h.id_tipo_habitacion LEFT JOIN(SELECT rh.id_tipo_habitacion, rh.id_habitacion,rh.id_reserva AS ocupado FROM reserva r INNER JOIN reserva_habitacion rh ON r.id=rh.id_reserva WHERE (r.fecha_in <= "'+ dateFormatted +'" AND r.fecha_out > "'+ dateFormatted +'") GROUP BY rh.id_tipo_habitacion, rh.id_habitacion) AS q ON q.id_tipo_habitacion=th.id and q.id_habitacion=h.id',
+	};
+
+var createTablesTemplate = 
+	[
+	'CREATE TABLE IF NOT EXISTS tipo_habitacion (id INTEGER PRIMARY KEY AUTOINCREMENT, descripcion TEXT, informacion TEXT,precio DOUBLE, capacidad_min INTEGER,capacidad_max INTEGER)',
+	'CREATE TABLE IF NOT EXISTS habitaciones (id INTEGER PRIMARY KEY AUTOINCREMENT, nombre_habitacion TEXT, id_tipo_habitacion INTEGER)',
+	'CREATE TABLE IF NOT EXISTS reserva (id INTEGER PRIMARY KEY AUTOINCREMENT, referencia TEXT, documento TEXT, observaciones TEXT, estado INTEGER, email TEXT, telefono TEXT, valorservicios DOUBLE, valorhotelsi DOUBLE, valortotalci DOUBLE, agencia INTEGER, fecha DATETIME, fecha_in DATETIME, fecha_out DATETIME, pagada INTEGER, id_cliente_hotel INTEGER, id_canal INTEGER)',
+	'CREATE TABLE IF NOT EXISTS reserva_habitacion (id INTEGER PRIMARY KEY AUTOINCREMENT, id_reserva INTEGER, id_tipo_habitacion INTEGER, personas INTEGER, subtotal DOUBLE, ocupante TEXT, id_habitacion INTEGER)',
+	];
+	
+var db = openDatabase('AddressBook', '1.0', 'Fullrooms', 200000);
+var dataset;
+var smallerMenu = false;
+var ref = '';
+var title = '';
+
+$(document).ready(function(){
+	$(window).on('resize',function(){
+		if($(this).width() >= 768){
+			$('#nav-container').data('isshown','false');
+			}
+	
+		if($('#nav-container').data('isshown') == 'false'){
+			if($(this).width() >= 768){
+				$('#nav-container').css('left','0px');
+				$('#content').css('left','220px');
+				$('.menuItem').css('left','0px');
+				
+				if($('#side-slider').data('slideisshown') == 'true'){
+					$('#side-slider').css('left','220px');
+					}
+				
+				smallerMenu = false;
+				}
+			else{
+				$('#nav-container').css('left','-220px');
+				$('#content').css('left','0px');
+				$('.menuItem').css('left','0px');
+				
+				if($('#side-slider').data('slideisshown') == 'true'){
+					$('#side-slider').css('left','50px');
+					}
+				}
+			}
+		});
+
+	$('.menu-button').on('click',function(){
+		if($('#nav-container').css('left') == '0px'){
+			$('#nav-container').css('left','-220px').data('isshown','false');
+			$('#content').css('left','0px');
+			
+			if($('#side-slider').data('slideisshown') == 'true'){
+				$('#side-slider').css('left','50px');
+				}
+			}
+		else{
+			$('#nav-container').css('left','0px').data('isshown','true');
+			$('#content').css('left','220px');
+				
+			if($('#side-slider').data('slideisshown') == 'true'){
+				$('#side-slider').css('left','220px');
+				}
+			}
+		});
+		
+	$('.toggle-min').on('click',function(){
+		if ($('#nav-container, .menuItem, #content').is(':animated')){
+			return false;
+			}
+			
+		$('li').find('ul').slideUp();
+		
+		if(smallerMenu === false){
+			$('#content').animate({
+				left : '50px'
+				});
+				
+			if($('#side-slider').data('slideisshown') == 'true'){
+				$('#side-slider').animate({left : '50px'});
+				}
+			
+			$('#nav-container').animate({
+				left : '-220px',
+				},function(){
+					$('.menuItem').each(function(index,object){
+						$(this).delay(index * 100);
+						
+						$(object).animate({
+							left : '220px'},{
+								duration: 800,
+								easing: 'swing'
+								});
+						});
+					});
+			
+			setTimeout(function(){
+				$('.menuItem').animate({
+					left : '170px'
+					});
+					
+				$('#nav-container').animate({
+					left : '-170px'
+					});
+				},1500)
+			
+			smallerMenu = true;
+			}
+		else{
+			$('#content').animate({
+				left : '220px'
+				});
+				
+			if($('#side-slider').data('slideisshown') == 'true'){
+				$('#side-slider').animate({left : '220px'});
+				}
+				
+			$('#nav-container').animate({
+				left : '0'
+				});
+			
+			$('.menuItem').animate({
+				left : '0px'
+				});
+				
+			smallerMenu = false;
+			}
+		});
+		
+	$('#nav > li').on('mouseenter',function(){
+		if(smallerMenu === true){
+			if($(this).closest('li').children('ul').length > 0){
+				var menu = '';
+				$(this).closest('li').children('ul').children('li').each(function(){
+					var getHTML = $(this).html();
+					var newHTML = $(getHTML);
+					newHTML.find('i').css({'padding' : '0px', 'padding-left' : '10px', 'text-align' : 'left'});
+					
+					menu += '<li style="text-align: left;">'+ newHTML.html() +'</li>';
+					});
+					
+				$(this).find('i:first').append('<div class="dynMenu" style="background-color: #f1f1f1; color: #333333; left: 50px; width: 150px; font-family: Roboto,Arial,Helvetica,sans-serif; box-shadow: 1px 0px 6px 0px rgba(50, 50, 50, 0.64); top: 0; position: absolute; z-index: 999999;"><ul style="display: block;">'+ menu +'</div>');
+				}
+			}
+		});
+		
+	$('#nav > li').on('mouseleave',function(){
+		$('.dynMenu').remove();
+		});
+
+	$('#nav li').on('click',function(event){
+		if(smallerMenu === false){
+			event.stopPropagation();
+			if($('#nav > li > a').attr('href') == '#'){
+				if($(this).find('ul').length > 0){
+					if($(this).find('ul').css('display') == 'block'){
+						$('#nav-wrapper ul#nav li ul').removeClass('open');
+						$('#nav-wrapper ul#nav li ul').slideUp();
+						}
+					else{
+						$('#nav-wrapper ul#nav li').removeClass('open');
+						$('#nav-wrapper ul#nav li ul').slideUp();
+						$(this).addClass('open');
+						$(this).find('ul').slideDown();
+						}
+					}
+				}
+			}
+		else{
+			if($(this).closest('li').children('ul').length > 0){
+				$('.dynMenu').remove();
+				var menu = '';
+				$(this).closest('li').children('ul').children('li').each(function(){
+					var getHTML = $(this).html();
+					var newHTML = $(getHTML);
+					newHTML.find('i').css({'padding' : '0px', 'padding-left' : '10px', 'text-align' : 'left'});
+					
+					menu += '<li style="text-align: left;">'+ newHTML.html() +'</li>';
+					});
+					
+				$(this).find('i:first').append('<div class="dynMenu" style="background-color: #f1f1f1; color: #333333; left: 50px; width: 150px; font-family: Roboto,Arial,Helvetica,sans-serif; box-shadow: 1px 0px 6px 0px rgba(50, 50, 50, 0.64); top: 0; position: absolute; z-index: 999999;"><ul style="display: block;">'+ menu +'</div>');
+				}
+			}
+		});
+		
+	$('#nav a').on('click',function(){
+		$('#side-slier').data('slideisshown','false');
+		$('#side-slider').animate({
+			left : '100%'
+			});
+	
+		if($(this).data('link')){
+			ref = $(this).data('reference');
+			title = $(this).data('title');
+			$('#content').load($(this).data('link'), function(){
+				$('#title').html(title);
+				AddToDOMTree();
+				if(ref in dataInitReferences){
+					showRecords(ref,dataInitReferences[ref]);
+					}
+				});
+			}
+		});
+	
+	InitDatabase();
+	});
+	
+function InitDatabase(){
+    try{
+        if(!window.openDatabase){
+			alert('Fatal Error: Esta browser no apoya SQLite.');
+			return false;
+			}
+			
+		db.transaction(function(tx){ 
+			$(createTablesTemplate).each(function(key,value){
+				try{
+					tx.executeSql(value, [], loadAndReset, onError);
+					}
+				catch(e){
+					alert(e);
+					}
+				});
+			});
+		}
+		
+    catch(e){
+        if(e == 2){
+            alert('Version de la base de datos es invalida.');
+			} 
+		else{
+            alert(e);
+			}
+        return;
+		}
+	}
+	
+function DBAction(action,table,id){
+	var data = $('form').serializeArray();
+	var columns = '';
+	var placeholders = '';
+	var values = new Array();
+	
+	if(action == 'new'){
+		$.each(data, function(key,field){
+			if(field.name != 'id'){
+				columns += field.name +',';
+				placeholders += '?,';
+				values.push(field.value);
+				}
+			});
+		
+		var query = 'INSERT INTO '+ table +'('+ columns.substring(0,columns.length -1) +') VALUES('+ placeholders.substring(0,placeholders.length -1) +');';
+		TriggerQuery(query,values);
+		}
+		
+	else if(action == 'update'){
+		$.each(data, function(key,field){
+			if(field.name != 'id'){
+				columns += field.name +' = ?,';
+				}
+				
+			values.push(field.value);
+			});
+			
+		var query = 'UPDATE '+ table +' SET '+ columns.substring(0,columns.length -1) +' WHERE id = ?;';
+		TriggerQuery(query,values);
+		$('#modal-dialog-update').modal('show');
+		}
+		
+	else if(action == 'delete'){
+		var query = 'DELETE FROM '+ table +' WHERE id = ?;';
+		values.push(id);
+		TriggerQuery(query,values);
+		}
+	}
+	
+function TriggerQuery(query,args){
+    db.transaction(function(tx){
+		try{
+			tx.executeSql(query, args, loadAndReset, onError);
+			}
+		catch(e){
+			alert(e);
+			}
+		});
+	}
+	
+function showRecords(ref,query){
+	try{
+		db.transaction(function(tx){
+			tx.executeSql(query, [], function(tx, result){
+				dataset = result.rows;
+				
+				switch(ref){
+					case 'roomtypes':
+						for(var i = 0, item = null; i < dataset.length; i++){
+							item = dataset.item(i);
+							
+							var obj = '{\'id\' : \''+ item['id'] +'\', \'descripcion\' : \''+ item['descripcion'] +'\', \'precio\' :  \''+ item['precio'] +'\', \'capacidad_min\' : \''+ item['capacidad_min'] +'\', \'capacidad_max\' : \''+ item['capacidad_max'] +'\', \'informacion\' : \''+ item['informacion'] +'\'}';
+							var contents = '<tr>'
+								contents += '<td>';
+									contents += item['descripcion'];
+								contents += '</td>';
+								contents += '<td>';
+									contents += item['precio'];
+								contents += '</td>';
+								contents += '<td>';
+									contents += item['capacidad_min'];
+								contents += '</td>';
+								contents += '<td>';
+									contents += item['capacidad_max'];
+								contents += '</td>';
+								contents += '<td>';
+									contents += item['informacion'];
+								contents += '</td>';
+								contents += '<td style="text-align: center;">';
+									contents += '<div id="optionButtons'+ item['id'] +'" class="optionButtons"><button type="button" onclick="FindAndPlace('+ obj +'); return false;" class="btn btn-default"><span class="glyphicon glyphicon-cog"></span></button> <button type="button" onclick="$(\'.optionButtons\').show(); $(\'#optionButtons'+ item['id'] +'\').hide(); $(\'.deleteOptions\').hide();  $(\'#deleteOptions'+ item['id'] +'\').show(); return false;" class="btn btn-default"><span style="color: red;" class="glyphicon glyphicon-remove"></span></button></div><div id="deleteOptions'+ item['id'] +'" class="deleteOptions" style="display: none;"><button onclick="DBAction(\'delete\',\'tipo_habitacion\','+ item['id'] +'); return false;" type="button" class="btn btn-danger">Eliminar</button> <button type="button" onclick="$(\'.deleteOptions\').hide(); $(\'.optionButtons\').show(); return false;" class="btn btn-default">Cancelar</button></div>';
+								contents += '</td>';
+							contents += '</tr>';
+
+							$('#roomtypeListing').after(contents);
+							}
+						break;
+						
+					case 'rooms':
+						
+						for(var i = 0, item = null; i < dataset.length; i++){
+							item = dataset.item(i);
+							
+							var obj = '{\'id\' : \''+ item['id'] +'\', \'nombre_habitacion\' : \''+ item['nombre_habitacion'] +'\', \'id_tipo_habitacion\' :  \''+ item['id_tipo_habitacion'] +'\'}';
+							var contents = '<tr>'
+								contents += '<td>';
+									contents += item['nombre_habitacion'];
+								contents += '</td>';
+								contents += '<td class="type'+ item['id_tipo_habitacion'] +'">';
+									contents += item['id_tipo_habitacion'];
+								contents += '</td>';
+								contents += '<td style="text-align: center;">';
+									contents += '<div id="optionButtons'+ item['id'] +'" class="optionButtons"><button type="button" onclick="FindAndPlace('+ obj +'); return false;" class="btn btn-default"><span class="glyphicon glyphicon-cog"></span></button> <button type="button" onclick="$(\'.optionButtons\').show(); $(\'#optionButtons'+ item['id'] +'\').hide(); $(\'.deleteOptions\').hide();  $(\'#deleteOptions'+ item['id'] +'\').show(); return false;" class="btn btn-default"><span style="color: red;" class="glyphicon glyphicon-remove"></span></button></div><div id="deleteOptions'+ item['id'] +'" class="deleteOptions" style="display: none;"><button onclick="DBAction(\'delete\',\'habitaciones\','+ item['id'] +'); return false;" type="button" class="btn btn-danger">Eliminar</button> <button type="button" onclick="$(\'.deleteOptions\').hide(); $(\'.optionButtons\').show(); return false;" class="btn btn-default">Cancelar</button></div>';
+								contents += '</td>';
+							contents += '</tr>';
+
+							$('#roomListing').after(contents);
+							}
+							
+						tx.executeSql('SELECT * FROM tipo_habitacion', [], function(tx, result){
+							dataset = result.rows;
+							
+							for(var i = 0, item = null; i < dataset.length; i++){
+								item = dataset.item(i);
+								
+								var contents = '<option value="'+ item['id'] +'">'+ item['descripcion'] +'</option>';
+								$('#id_tipo_habitacion').append(contents);
+								$('.type'+ item['id']).html($('#id_tipo_habitacion option[value="'+ item['id'] +'"]').text());
+								}
+							});
+							
+						break;
+						
+					case 'console':
+						var contents = '';
+						var occ = '';
+						for(var i = 0, item = null; i < dataset.length; i++){
+							item = dataset.item(i);
+							occ = 'bg-bluematte';
+							
+							if(item['ocupado'] != null){
+								occ = 'bg-green';
+								}
+							
+							contents += '<div onclick="SlideIn('+ item['ocupado'] +'); return false" class="col-lg-3 col-sm-2">';
+								contents += '<div class="panel widget '+ occ +'">';
+									contents += '<div class="row row-table" style="padding: 0px;">';
+										contents += '<div class="col-xs-12 pv-lg" style="text-align: center;">';
+											contents += '<div class="h2 mt0" style="margin-top: 10px;">'+ item['nombre_habitacion'] +'</div>';
+											contents += '<div  style="font-size: 12px; margin-bottom: 10px;">'+ item['desc'] +'</div>';
+										contents += '</div>';
+									contents += '</div>';
+								contents += '</div>';
+							contents += '</div>';
+							}
+							
+						$('#console-content').html(contents);
+						break;
+						
+					case 'console_guest':
+					
+						for(var i = 0, item = null; i < dataset.length; i++){
+							item = dataset.item(i);
+							$('#ref').val(item['referencia']);
+							$('#email').val(item['email']);
+							$('#telefono').val(item['telefono']);
+							$('#documento').val(item['documento']);
+							$('#dateIn').val(item['fecha_in']);
+							$('#dateOut').val(item['fecha_out']);
+							$('#observaciones').val(item['observaciones']);
+							}
+						
+						var contents = '';
+						tx.executeSql('SELECT rh.*,th.descripcion AS desc,h.nombre_habitacion AS nombre FROM reserva_habitacion rh INNER JOIN tipo_habitacion th ON rh.id_tipo_habitacion=th.id INNER JOIN habitaciones h ON rh.id_habitacion=h.id WHERE rh.id_reserva="'+ item['id'] +'"', [], function(tx, result){
+							dataset = result.rows;
+							
+							var total = 0;
+							
+							for(i = 0, item = null; i < dataset.length; i++){
+								item = dataset.item(i);
+								
+								contents += '<tr>';
+									contents += '<td>'+ item['desc'] +' ('+ item['nombre'] +')</td>';
+									contents += '<td style="text-align: center;">1</td>';
+									contents += '<td style="text-align: right;">'+ parseFloat(item['subtotal']).toFixed(2) +'</td>';
+								contents += '</tr>';
+								total += parseFloat(item['subtotal']);
+								}
+							
+							$('#precioTotal').html(parseFloat(total).toFixed(2));
+							$('#stayDetail').after(contents);
+							});
+							
+						break;
+						
+					default:
+					}
+				
+				});
+			});
+		}
+	catch(e){
+		alert(e);
+		}
+	}
+	
+function FindAndPlace(object){
+	$.each(object,function(key,field){
+		if($('[name='+ key +']').length > 0){
+			$('[name='+ key +']').val(field);
+			}
+		});
+	
+	$('#modal-hide,#editEntry').show();
+	$('#modal-show,#newEntry').hide();
+	$('#modal').slideDown();
+	}
+
+function onError(tx, error){
+    alert(error.message);
+	}
+	
+function loadAndReset(){
+    $('a[data-reference="'+ ref +'"]').trigger('click');
+	}
+	
+function chooseRoomTypeOptionNew(desc,roomtype){
+	$('#dropdownMenuNewRoom').html(desc +' <span class="caret"></span>');
+	$('#selectedRoomType').val(roomtype);
+	}
+	
+function AddToDOMTree(){
+	$('.isDate').datepicker({
+		showAnim: 'slideDown',
+		showOtherMonths: true,
+		dateFormat: 'yy-mm-dd',
+		defaultDate: 0,
+		dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+		onSelect: function(date){
+			var query = 'SELECT th.id, th.descripcion AS desc, h.id, h.nombre_habitacion, h.id_tipo_habitacion,q.ocupado FROM tipo_habitacion th INNER JOIN habitaciones h ON th.id=h.id_tipo_habitacion LEFT JOIN(SELECT rh.id_tipo_habitacion, rh.id_habitacion,rh.id_reserva as ocupado FROM reserva r INNER JOIN reserva_habitacion rh ON r.id=rh.id_reserva WHERE (r.fecha_in <= "'+ date +'" AND r.fecha_out > "'+ date +'") GROUP BY rh.id_tipo_habitacion, rh.id_habitacion) AS q ON q.id_tipo_habitacion=th.id and q.id_habitacion=h.id';
+			showRecords('console',query);
+			}
+		}).datepicker('setDate', new Date());
+		
+		$('.isNotPassedDate').datepicker({
+			showAnim: 'slideDown',
+			showOtherMonths: true,
+			dateFormat: 'yy-mm-dd',
+			defaultDate: 0,
+			minDate: 0,
+			dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']
+			});
+	}
+
+function SlideIn(idreserva){
+	var leftMargin = '220px';
+	if(smallerMenu === true){
+		leftMargin = '50px';
+		}
+	$('#side-slider').animate({
+		left : leftMargin
+		});
+		
+	$('#side-slider').data('slideisshown','true');
+	$('#side-slider').load('subpages/hotel/consola_huesped.html',function(){
+		$('#reservaID').html(idreserva);
+		$('#entryID').val(idreserva);
+		
+		var query = 'SELECT * FROM reserva WHERE id="'+ idreserva +'"';
+		showRecords('console_guest',query);
+		AddToDOMTree();
+		});
+	
+	}
+</script>
